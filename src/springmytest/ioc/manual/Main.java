@@ -1,4 +1,4 @@
-package springmytest;
+package springmytest.ioc.manual;
 
 public class Main {
 

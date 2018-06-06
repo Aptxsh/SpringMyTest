@@ -1,4 +1,4 @@
-package springmytest;
+package springmytest.ioc.ioc;
 
 public class A {
 
@@ -10,7 +10,7 @@ public class A {
 	}
 
 	public void a() {
-		System.out.println("a");
+		System.out.println("this is ioc a");
 		b.b();
 	}
 }
