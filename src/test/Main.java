@@ -8,6 +8,6 @@ public class Main {
 		ClassPathXmlApplicationContext conttext = new ClassPathXmlApplicationContext("test/beans.xml");
 		UserController userController = conttext.getBean(UserController.class);
 		userController.register("admin", "admin");
-		userController.register("abc", "abc");
+		userController.register("abc", "root");
 	}
 }
