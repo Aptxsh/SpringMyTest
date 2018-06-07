@@ -3,6 +3,9 @@ package test2.review;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class StudentDao implements IStudentDao {
 
 	@Override

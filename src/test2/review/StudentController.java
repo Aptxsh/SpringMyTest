@@ -2,10 +2,15 @@ package test2.review;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class StudentController {
 
 	private IStudentService studentService;
 
+	@Autowired
 	public StudentController(IStudentService studentService) {
 		this.studentService = studentService;
 	}
