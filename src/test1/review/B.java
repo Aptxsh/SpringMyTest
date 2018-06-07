@@ -1,4 +1,4 @@
-package test.review;
+package test1.review;
 
 public class B {
 

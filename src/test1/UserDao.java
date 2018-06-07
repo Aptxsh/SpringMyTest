@@ -1,4 +1,4 @@
-package test;
+package test1;
 
 public class UserDao implements IUserDao {
 

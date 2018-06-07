@@ -4,14 +4,14 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans	http://www.springframework.org/schema/beans/spring-beans.xsd
 	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean id="UserController" class="test.UserController">
+	<bean id="UserController" class="test1.UserController">
 		<constructor-arg ref="UserService"></constructor-arg>
 	</bean>
-	<bean id="UserService" class="test.UserService">
+	<bean id="UserService" class="test1.UserService">
 		<property name="userDao" ref="UserDao"></property>
 		<property name="passwordEncoder" ref="passwordEncoder"></property>
 	</bean>
-	<bean id="UserDao" class="test.UserDao">
+	<bean id="UserDao" class="test1.UserDao">
 	</bean>
 	<bean id="passwordEncoder"
 		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
