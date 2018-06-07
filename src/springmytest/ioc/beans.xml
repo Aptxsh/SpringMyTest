@@ -4,13 +4,6 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans	http://www.springframework.org/schema/beans/spring-beans.xsd
 	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean id="a" class="springmytest.ioc.ioc.A">
-		<constructor-arg ref="b"></constructor-arg>
-	</bean>
-	<bean id="b" class="springmytest.ioc.ioc.B">
-		<property name="c" ref="c"></property>
-	</bean>
-	<bean id="c" class="springmytest.ioc.ioc.C">
-	</bean>
+	<context:component-scan base-package="springmytest.ioc"></context:component-scan>
 
 </beans>

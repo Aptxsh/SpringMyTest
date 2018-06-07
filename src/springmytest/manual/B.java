@@ -1,4 +1,4 @@
-package springmytest.ioc.manual;
+package springmytest.manual;
 
 public class B {
 
