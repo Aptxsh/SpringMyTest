@@ -8,7 +8,7 @@
 		<constructor-arg ref="UserService"></constructor-arg>
 	</bean>
 	<bean id="UserService" class="test.UserService">
-		<property name="UserDao" ref="UserDao"></property>
+		<property name="userDao" ref="UserDao"></property>
 		<property name="passwordEncoder" ref="passwordEncoder"></property>
 	</bean>
 	<bean id="UserDao" class="test.UserDao">
