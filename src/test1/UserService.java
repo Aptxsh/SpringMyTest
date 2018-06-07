@@ -1,23 +1,20 @@
 package test1;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserService implements IUserService {
 
+	@Autowired
 	private IUserDao userDao;
 
+	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
-
-	public BCryptPasswordEncoder getPasswordEncoder() {
-		return passwordEncoder;
-	}
 
 	public void setPasswordEncoder(BCryptPasswordEncoder passwordEncoder) {
 		this.passwordEncoder = passwordEncoder;
-	}
-
-	public IUserDao getUserDao() {
-		return userDao;
 	}
 
 	public void setUserDao(IUserDao userDao) {
