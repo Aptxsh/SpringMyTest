@@ -2,9 +2,9 @@ package test;
 
 public class UserController {
 
-	private UserService userService;
+	private IUserService userService;
 
-	public UserController(UserService userService) {
+	public UserController(IUserService userService) {
 		this.userService = userService;
 	}
 

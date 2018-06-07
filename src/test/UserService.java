@@ -2,9 +2,9 @@ package test;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-public class UserService {
+public class UserService implements IUserService {
 
-	private UserDao userDao;
+	private IUserDao userDao;
 
 	private BCryptPasswordEncoder passwordEncoder;
 
@@ -16,14 +16,15 @@ public class UserService {
 		this.passwordEncoder = passwordEncoder;
 	}
 
-	public UserDao getUserDao() {
+	public IUserDao getUserDao() {
 		return userDao;
 	}
 
-	public void setUserDao(UserDao userDao) {
+	public void setUserDao(IUserDao userDao) {
 		this.userDao = userDao;
 	}
 
+	@Override
 	public void register(String username, String password) {
 		System.out.println("检查用户名" + username + "是否存在...");
 		if (userDao.usernameExists(username)) {
