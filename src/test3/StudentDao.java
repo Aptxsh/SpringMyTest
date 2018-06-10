@@ -1,4 +1,4 @@
-package test2.review;
+package test3;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,16 +6,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.sql.DataSource;
+import org.springframework.stereotype.Repository;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-@Component
+@Repository
 public class StudentDao implements IStudentDao {
 
-	@Autowired
 	private DataSource dataSource;
 
 	public StudentDao(DataSource dataSource) {
@@ -23,8 +19,8 @@ public class StudentDao implements IStudentDao {
 	}
 
 	@Override
-	public List<Student> queryAll() {
-		List<Student> list = new ArrayList<Student>();
+	public List<Student> findAll() {
+		List<Student> list = new ArrayList<>();
 		Connection conn = null;
 		try {
 			conn = dataSource.getConnection();
@@ -37,8 +33,7 @@ public class StudentDao implements IStudentDao {
 				Gender gender = Gender.valueOf(rs.getString(3));
 				int age = rs.getInt(4);
 				String major = rs.getString(5);
-				Student s = new Student(number, name, gender, age, major);
-				list.add(s);
+				list.add(new Student(number, name, gender, age, major));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
