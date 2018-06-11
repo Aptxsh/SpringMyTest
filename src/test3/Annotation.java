@@ -11,7 +11,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 @ComponentScan(basePackages = "test3")
 public class Annotation {
 
-	@Bean
+	@Bean //
 	public DataSource driverClassName() {
 		DriverManagerDataSource dds = new DriverManagerDataSource("jdbc:oracle:thin:@localhost:1521:ORCL", "students",
 				"1234");
