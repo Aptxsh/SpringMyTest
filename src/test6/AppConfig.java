@@ -1,4 +1,4 @@
-package test5;
+package test6;
 
 import javax.sql.DataSource;
 
@@ -12,8 +12,8 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
-@ComponentScan(basePackages = "test5")
-@PropertySource("classpath:test5/jdbc.properties")
+@ComponentScan(basePackages = "test6")
+@PropertySource("classpath:test6/jdbc.properties")
 public class AppConfig {
 
 	@Bean

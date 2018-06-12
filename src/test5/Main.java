@@ -11,7 +11,8 @@ public class Main {
 		// studentController.findOne(2);
 		// studentController.add(new Student("李四", Gender.男, 22, "C++"));
 		// studentController.delete(21);
-		studentController.update(2, new Student("李四", Gender.男, 22, "C++"));
+		//studentController.update(2, new Student("李四", Gender.男, 22, "C++"));
+		studentController.password("123");
 	}
 
 }

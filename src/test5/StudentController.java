@@ -1,6 +1,7 @@
 package test5;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 
 @Controller
@@ -8,6 +9,14 @@ public class StudentController {
 
 	@Autowired
 	private StudentService studentService;
+
+	@Autowired
+	private BCryptPasswordEncoder passwordEncoder;
+
+	public StudentController(StudentService studentService, BCryptPasswordEncoder passwordEncoder) {
+		this.studentService = studentService;
+		this.passwordEncoder = passwordEncoder;
+	}
 
 	public void findOne(Integer id) {
 		Student s = studentService.findOne(id);
@@ -37,4 +46,8 @@ public class StudentController {
 		}
 	}
 
+	public void password(String pwd) {
+		String password = passwordEncoder.encode(pwd);
+		System.out.println(password);
+	}
 }

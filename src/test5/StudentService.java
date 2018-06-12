@@ -9,6 +9,10 @@ public class StudentService {
 	@Autowired
 	private StudentDao studentDao;
 
+	public StudentService(StudentDao studentDao) {
+		this.studentDao = studentDao;
+	}
+
 	public Student findOne(Integer id) {
 		return studentDao.findOne(id);
 	}
