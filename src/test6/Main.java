@@ -21,16 +21,16 @@ public class Main {
 		// System.out.println("没有搜索结果");
 		// }
 
-		// List<Operator> list = operatorDaoImpl.findAll();
-		// if (list != null) {
-		// for (Operator operator : list) {
-		// System.out.println(String.format("%s %s %s %s %s", operator.getId(),
-		// operator.getUsername(), operator.getPassword(), operator.getRole(),
-		// operator.getDisabled()));
-		// }
-		// } else {
-		// System.out.println("没有搜索结果");
-		// }
+		 List<Operator> list = operatorDaoImpl.findAll();
+		 if (list != null) {
+		 for (Operator operator : list) {
+		 System.out.println(String.format("%s %s %s %s %s", operator.getId(),
+		 operator.getUsername(), operator.getPassword(), operator.getRole(),
+		 operator.getDisabled()));
+		 }
+		 } else {
+		 System.out.println("没有搜索结果");
+		 }
 
 		// operatorDaoImpl.create("root", "root", "HR");
 

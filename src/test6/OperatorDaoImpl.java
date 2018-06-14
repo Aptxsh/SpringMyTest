@@ -81,7 +81,7 @@ public class OperatorDaoImpl implements OperatorDao {
 	 */
 	@Override
 	public void disable(Integer id) {// 禁用指定管理员账号（将DISABLED列设为true）
-		String sql = "update OPERATORS set DISABLED = 'true' where ID = ?";
+		String sql = "update OPERATORS set DISABLED = 1 where ID = ?";
 		jdbcTemplate.update(sql, id);
 	}
 
@@ -90,7 +90,7 @@ public class OperatorDaoImpl implements OperatorDao {
 	 */
 	@Override
 	public void enable(Integer id) {// 启用指定管理员账号（将DISABLED列设为false）
-		String sql = "update OPERATORS set DISABLED = 'false' where ID = ?";
+		String sql = "update OPERATORS set DISABLED = 0 where ID = ?";
 		jdbcTemplate.update(sql, id);
 	}
 
